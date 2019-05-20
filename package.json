@@ -1,0 +1,30 @@
+{
+  "name": "geeksforgeeks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --color --coverage",
+    "test:watch": "jest --watch --color",
+    "flow": "flow",
+    "eslint": "eslint",
+    "code-quality": "eslint src"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.4.3",
+    "@babel/core": "7.4.3",
+    "@babel/node": "7.2.2",
+    "@babel/parser": "7.4.3",
+    "@babel/preset-env": "7.4.3",
+    "@babel/preset-flow": "7.0.0",
+    "babel-eslint": "10.0.1",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-plugin-flowtype": "3.6.1",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-prettier": "3.0.1",
+    "jest": "24.7.1",
+    "prettier": "1.17.0"
+  }
+}
