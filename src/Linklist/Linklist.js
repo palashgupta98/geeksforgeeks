@@ -6,7 +6,7 @@
 import Node from "./Node";
 
 class Linklist {
-  head: Node;
+  head: Node | null;
 
   constructor() {
     this.head = null;
@@ -32,7 +32,7 @@ class Linklist {
   /**
    * @description iterative function to delete the key
    * @param {Number} key
-   * @returns {Boolean}
+   * @returns Boolean
    */
   deleteAtKey(key: Number) {
     let node = this.head;

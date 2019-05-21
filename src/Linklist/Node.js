@@ -4,7 +4,7 @@
 class Node {
   value: Number;
 
-  next: Node;
+  next: Node | null;
 
   constructor(value: Number) {
     this.value = value;
