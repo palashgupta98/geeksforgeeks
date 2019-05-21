@@ -1,8 +1,13 @@
+/**
+ * @flow
+ */
 /* eslint-disable no-console */
 
 import Node from "./Node";
 
 class Linklist {
+  head: Node;
+
   constructor() {
     this.head = null;
   }
@@ -18,7 +23,7 @@ class Linklist {
     }
   }
 
-  insertAtHead(value) {
+  insertAtHead(value: Number) {
     const newNode = new Node(value);
     newNode.next = this.head;
     this.head = newNode;
@@ -29,7 +34,7 @@ class Linklist {
    * @param {Number} key
    * @returns {Boolean}
    */
-  deleteAtKey(key) {
+  deleteAtKey(key: Number) {
     let node = this.head;
     if (node.value === key) {
       this.head = this.head.next;

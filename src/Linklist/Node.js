@@ -1,5 +1,12 @@
+/**
+ * @flow
+ */
 class Node {
-  constructor(value) {
+  value: Number;
+
+  next: Node;
+
+  constructor(value: Number) {
     this.value = value;
     this.next = null;
   }

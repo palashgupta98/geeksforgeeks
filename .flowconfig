@@ -6,6 +6,7 @@ node_modules
 ./src
 
 [libs]
+flow-typed
 
 [lints]
 
