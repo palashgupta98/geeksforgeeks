@@ -35,4 +35,31 @@ describe("LinkList", () => {
     list.deleteAtKey(2);
     expect(list.head.next.value).toEqual(3);
   });
+
+  it("length iterative", () => {
+    const length = list.lengthIterative();
+    expect(length).toEqual(4);
+  });
+
+  // get the length in O(N)
+  it("length iterative", () => {
+    const length = list.lengthRecrsive(list.head);
+    expect(length).toEqual(4);
+  });
+
+  // search the element in the O(N)
+  it("search iterative", () => {
+    const found = list.searchIterative(2);
+    const found1 = list.searchIterative(21);
+
+    expect(found).toBe(true);
+    expect(found1).toBe(false);
+  });
+
+  it("search iterative", () => {
+    const found = list.searchRecursive(list.head, 2);
+    const found1 = list.searchRecursive(list.head, 20);
+    expect(found).toBe(true);
+    expect(found1).toBe(false);
+  });
 });
