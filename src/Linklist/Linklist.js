@@ -2,7 +2,6 @@
  * @flow
  */
 /* eslint-disable no-console */
-
 import Node from "./Node";
 
 class Linklist {
@@ -15,7 +14,7 @@ class Linklist {
   /**
    * @description used to print the linklist
    */
-  print() {
+  print(): void {
     let node = this.head;
     while (node != null) {
       console.log(node.value);
@@ -23,7 +22,7 @@ class Linklist {
     }
   }
 
-  insertAtHead(value: Number) {
+  insertAtHead(value: number): void {
     const newNode = new Node(value);
     newNode.next = this.head;
     this.head = newNode;
@@ -34,7 +33,7 @@ class Linklist {
    * @param {Number} key
    * @returns Boolean
    */
-  deleteAtKey(key: Number) {
+  deleteAtKey(key: number): boolean {
     let node = this.head;
     if (node.value === key) {
       this.head = this.head.next;
@@ -48,6 +47,46 @@ class Linklist {
       node = node.next;
     }
     return true;
+  }
+
+  lengthIterative(): number {
+    let node = this.head;
+    let count = 0;
+    while (node != null) {
+      count += 1;
+      node = node.next;
+    }
+    return count;
+  }
+
+  lengthRecrsive(head: Node): number {
+    if (head == null) {
+      return 0;
+    }
+    return 1 + this.lengthRecrsive(head.next);
+  }
+
+  searchIterative(key: number): boolean {
+    let node = this.head;
+    let found = false;
+    while (node != null) {
+      if (node.value === key) {
+        found = true;
+        break;
+      }
+      node = node.next;
+    }
+    return found;
+  }
+
+  searchRecursive(head: Node, key: number): boolean {
+    if (head === null) {
+      return false;
+    }
+    if (head.value === key) {
+      return true || this.searchRecursive(head.next, key);
+    }
+    return false || this.searchRecursive(head.next, key);
   }
 }
 
