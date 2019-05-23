@@ -88,6 +88,33 @@ class Linklist {
     }
     return false || this.searchRecursive(head.next, key);
   }
+
+  /**
+   * @description there are two approach for the problem to find the length and use len-n+1 or use two pointer
+   * @param {number} n
+   */
+  getNthNodeFromLast(n: number): Node {
+    let fast = this.head;
+    let slow = this.head;
+    let count = 0;
+
+    if (fast != null) {
+      // move the fast pointer to the n iteration
+      while (count < n) {
+        if (fast === null) {
+          return null;
+        }
+        count = +1;
+        fast = fast.next;
+      }
+      // and then move fast and slow until fast becomes null and return the null
+      while (fast != null) {
+        slow = slow.next;
+        fast = fast.next;
+      }
+    }
+    return slow;
+  }
 }
 
 export default Linklist;

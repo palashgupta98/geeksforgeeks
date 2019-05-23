@@ -2,6 +2,7 @@ import LinkList from "./Linklist";
 import Node from "./Node";
 
 let list = 0;
+
 describe("LinkList", () => {
   beforeEach(() => {
     list = new LinkList();
@@ -62,4 +63,12 @@ describe("LinkList", () => {
     expect(found).toBe(true);
     expect(found1).toBe(false);
   });
+
+  // it("get nth node from last", () => {
+  //   const node = list.getNthNodeFromLast(1);
+  //   const node1 = list.getNthNodeFromLast(3);
+
+  //   expect(node.value).toBe(4);
+  //   expect(node1.value).toBe(3);
+  // });
 });
