@@ -64,11 +64,22 @@ describe("LinkList", () => {
     expect(found1).toBe(false);
   });
 
-  // it("get nth node from last", () => {
-  //   const node = list.getNthNodeFromLast(1);
-  //   const node1 = list.getNthNodeFromLast(3);
+  // get the length and then get the n node form last using l-n-1
+  it("get nth node from last", () => {
+    const node = list.getLastNode(0);
+    const node1 = list.getLastNode(1);
+    const node2 = list.getLastNode(2);
 
-  //   expect(node.value).toBe(4);
-  //   expect(node1.value).toBe(3);
-  // });
+    expect(node.value).toBe(4);
+    expect(node1.value).toBe(3);
+    expect(node2.value).toBe(2);
+  });
+
+  it("getLastNodefromlast", () => {
+    const node = list.getLastNodefromlast(4);
+    const node1 = list.getLastNodefromlast(3);
+
+    expect(node.value).toBe(1);
+    expect(node1.value).toBe(2);
+  });
 });
