@@ -27,5 +27,8 @@
     "flow-bin": "^0.98.1",
     "jest": "24.7.1",
     "prettier": "1.17.0"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.4"
   }
 }
