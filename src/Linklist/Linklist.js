@@ -106,7 +106,6 @@ class Linklist {
   getLastNodefromlast(n: number): Node {
     let slow = this.head;
     let fast = this.head;
-
     let count = 0;
     while (count < n) {
       if (fast === null) {
@@ -115,14 +114,14 @@ class Linklist {
       count += 1;
       fast = fast.next;
     }
-
     while (fast != null) {
       fast = fast.next;
       slow = slow.next;
     }
-
     return slow;
   }
+
+  isPalindrome(): boolean {}
 }
 
 export default Linklist;
