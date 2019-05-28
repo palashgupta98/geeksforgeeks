@@ -4,31 +4,29 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest --color --coverage",
-    "test:watch": "jest --watch --color",
-    "flow": "flow",
-    "eslint": "eslint",
-    "code-quality": "eslint src"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "tsc",
+    "prettier": "prettier -c 'src/**/*.ts'",
+    "prettier:fix": "prettier --write 'src/**/*.ts'",
+    "eslint": "eslint src/**/*.ts",
+    "eslint:fix": "eslint --fix src/**/*.ts",
+    "lint": "npm run eslint:fix"
   },
   "devDependencies": {
-    "@babel/cli": "7.4.3",
-    "@babel/core": "7.4.3",
-    "@babel/node": "7.2.2",
-    "@babel/parser": "7.4.3",
-    "@babel/preset-env": "7.4.3",
-    "@babel/preset-flow": "7.0.0",
-    "babel-eslint": "10.0.1",
+    "@types/jest": "24.0.13",
+    "@types/lodash": "4.14.130",
+    "@types/node": "12.0.2",
+    "@types/xxhashjs": "0.2.1",
+    "@typescript-eslint/eslint-plugin": "1.9.0",
+    "@typescript-eslint/parser": "1.9.0",
     "eslint": "5.16.0",
-    "eslint-config-airbnb-base": "13.1.0",
-    "eslint-config-prettier": "4.1.0",
-    "eslint-plugin-flowtype": "^3.9.0",
-    "eslint-plugin-import": "2.17.2",
-    "eslint-plugin-prettier": "3.0.1",
-    "flow-bin": "^0.98.1",
-    "jest": "24.7.1",
-    "prettier": "1.17.0"
-  },
-  "dependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.4.4"
+    "eslint-config-prettier": "4.3.0",
+    "eslint-plugin-jest": "22.5.1",
+    "eslint-plugin-prettier": "3.1.0",
+    "jest": "24.8.0",
+    "prettier": "1.17.1",
+    "ts-jest": "24.0.2",
+    "typescript": "3.4.5"
   }
 }
