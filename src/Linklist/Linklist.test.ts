@@ -83,5 +83,4 @@ describe("LinkList", () => {
     expect(node1.value).toBe(2);
   });
 
-  // it('')
 });
