@@ -83,4 +83,9 @@ describe("LinkList", () => {
     expect(node1.value).toBe(2);
   });
 
+  it("attach the last node to front", () => {
+    expect(list.moveLastElementToFront()).toBe(true);
+    expect(list.head.value).toBe(4);
+    expect(list.head.next.value).toBe(1);
+  });
 });

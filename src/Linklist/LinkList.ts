@@ -121,6 +121,32 @@ class LinkList {
     }
     return slow;
   }
+
+  moveLastElementToFront(): boolean {
+    if (this.head === null) {
+      return false;
+    }
+
+    let last = this.head;
+    let secondLast = null;
+
+    while (last.next != null) {
+      secondLast = last;
+      last = last.next;
+    }
+
+    if (secondLast != null) {
+      secondLast.next = null;
+    }
+
+    // made the link between the last and first one
+    last.next = this.head;
+
+    //updated the head
+    this.head = last;
+
+    return true;
+  }
 }
 
 export default LinkList;
