@@ -1,11 +1,11 @@
 class BinarySearch {
-  arr: Array<Number> = [];
+  arr: number[] = [];
 
-  constructor(arr: Array<Number>) {
+  constructor(arr: number[]) {
     this.arr = arr;
   }
 
-  search({ no }: { no: Number }) {
+  search({ no }: { no: number }): number {
     let l = 0;
     let r = this.arr.length - 1;
     while (l < r) {

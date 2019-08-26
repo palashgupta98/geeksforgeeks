@@ -77,7 +77,7 @@ class LinkList {
     return found;
   }
 
-  searchRecursive(head: Node | null, key: Number): boolean {
+  searchRecursive(head: Node | null, key: number): boolean {
     if (head === null) {
       return false;
     }
@@ -104,7 +104,7 @@ class LinkList {
     return slow;
   }
 
-  getLastNodefromlast(n: Number): Node | null {
+  getLastNodefromlast(n: number): Node | null {
     let slow = this.head;
     let fast: Node | null = this.head;
     let count = 0;

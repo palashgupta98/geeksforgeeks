@@ -1,13 +1,13 @@
 class ArrayList {
   size = 0;
 
-  array: Array<number>;
+  array: number[];
 
   constructor() {
     this.array = new Array(10);
   }
 
-  get(n: number): Number {
+  get(n: number): number {
     if (n > this.size) {
       throw new Error("Cannot get the max valued");
     }
